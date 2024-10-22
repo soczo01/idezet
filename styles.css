@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 20px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+
+
+.kontener {
+    text-align: center;
+    width: 600px;
+
+}
+
+.idezetdoboz {
+    border: 1px solid none;
+    padding: 20px;
+    background-color:#ececec;
+    margin-bottom: 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.idezetdoboz p {
+    margin: 10px;
+}
+
+#idezet {
+    font-size: 20px;
+}
+
+#szerzo {
+    font-size: 15px;
+    color: #555;
+}
+
+.gombok {
+    display: flex;
+    justify-content: space-between;
+}
+.leptetogomb {
+    background-color: #2869e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.leptetogomb:hover{
+    background-color: #1a479b;
+}
+
+h2{
+    margin: 20px;
+}
+
+.kedvencgomb {
+    background-color: rgb(236, 87, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.kedvencgomb:hover{
+    background-color: rgb(236, 47, 0);
+}
+.kedvenclista {
+    margin-top: 20px;
+}
+
+.kedvenclista ul {
+    list-style: none;
+}
+
+.kedvenclista li {
+    margin-bottom: 10px;
+}

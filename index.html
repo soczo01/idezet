@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Idézetek</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1>Kedvenc idézeteim</h1>
+    <div class="kontener">
+        <div class="idezetdoboz">
+            <p id="idezet"></p>
+            <p id="szerzo"></p>
+        </div>
+        <div class="gombok">
+            <button id="elozogomb" class="leptetogomb">⬅</button>
+            <button id="kedvencgomb" class="kedvencgomb">Kedvencekhez adás</button>
+            <button id="kovetkezogomb" class="leptetogomb">➡</button>
+        </div>
+        <div class="kedvenclista">
+            <h2>Kedvenc idézetek:</h2>
+            <ul id="kedvencidezetek"></ul>
+        </div>
+    </div>
+    <script src="idezetek.js"></script>
 </body>
 </html>

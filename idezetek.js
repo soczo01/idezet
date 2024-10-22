@@ -30,3 +30,61 @@ const idezetek = [
     { "idezet": "Ne hagyd, hogy a megélhetés iránti törekvés megakadályozzon abban, hogy életet élj.", "szerzo": "John Wooden" },
     { "idezet": "Az életed akkor javul, ha te is fejlődsz.", "szerzo": "Brian Tracy" }
 ];
+
+
+const idezeteklista = idezetek;
+let aktualisindex = 0;
+let kedvencek = [];
+
+function idezetbetoltese(index) {
+    const aktualisidezet = idezeteklista[index];
+    document.getElementById('idezet').innerText = `"${aktualisidezet.idezet}"`;
+    document.getElementById('szerzo').innerText = `- ${aktualisidezet.szerzo}`;
+    gombokfrissitese();
+}
+
+function gombokfrissitese() {
+    document.getElementById('elozogomb').disabled = aktualisindex === 0;
+    document.getElementById('kovetkezogomb').disabled = aktualisindex === idezeteklista.length - 1;
+}
+
+function kedvencekfrissitese() {
+    const kedvenclista = document.getElementById('kedvencidezetek');
+    kedvenclista.innerHTML = '';
+    kedvencek.forEach(kedvenc => {
+        const listaelem = document.createElement('li');
+
+        listaelem.textContent = `"${kedvenc.idezet}" - ${kedvenc.szerzo}`;
+        kedvenclista.appendChild(listaelem);
+
+
+    });
+}
+
+document.getElementById('kovetkezogomb').addEventListener('click', () => {
+    if (aktualisindex < idezeteklista.length - 1) {
+        aktualisindex++;
+        idezetbetoltese(aktualisindex);
+
+    }
+
+});
+
+document.getElementById('elozogomb').addEventListener('click', () => {
+    if (aktualisindex > 0) {
+        aktualisindex--;
+
+        idezetbetoltese(aktualisindex);
+    }
+});
+
+document.getElementById('kedvencgomb').addEventListener('click', () => {
+    const aktualisidezet = idezeteklista[aktualisindex];
+    if (!kedvencek.some(kedvenc => kedvenc.idezet === aktualisidezet.idezet)) {
+        kedvencek.push(aktualisidezet);
+        kedvencekfrissitese();
+    }
+
+});
+
+
